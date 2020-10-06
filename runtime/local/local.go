@@ -240,9 +240,6 @@ func (r *localRuntime) Create(resource runtime.Resource, opts ...runtime.CreateO
 			return runtime.ErrInvalidResource
 		}
 
-		r.Lock()
-		defer r.Unlock()
-
 		if len(options.Namespace) == 0 {
 			options.Namespace = defaultNamespace
 		}
